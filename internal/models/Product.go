@@ -7,6 +7,7 @@ type Product struct {
 	Description         string
 	PhoneticDescription string
 	SKU                 int64
+	Departments         []int64
 	Tags                []string
 	Dimension           ProductDimension
 	TechnicalDetails    TechnicalDetail
