@@ -1,1 +1,5 @@
-package products
+package main
+
+func main() {
+
+}
