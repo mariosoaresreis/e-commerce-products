@@ -1,5 +1,7 @@
 package models
 
+import "time"
+
 type Product struct {
 	Id                  int64
 	Name                string
@@ -11,6 +13,9 @@ type Product struct {
 	Tags                []string
 	Dimension           ProductDimension
 	TechnicalDetails    TechnicalDetail
+	CreatedAt           time.Time  `json:"createdAt"`
+	UpdatedAt           *time.Time `json:"updatedAt,omitempty"`
+	ArchivedAt          *time.Time `json:"archivedAt,omitempty"`
 }
 
 type ProductDimension struct {
