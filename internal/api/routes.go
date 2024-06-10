@@ -8,7 +8,6 @@ import (
 
 type ProductHandler struct {
 	service services.ProductService
-	db      interfaces.DB
 }
 
 func (api *API) initRoutes(router *gin.Engine) {

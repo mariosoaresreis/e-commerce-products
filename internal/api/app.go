@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"products/internal/logger"
 )
 
 func validateEnvironmentVariables() {
@@ -19,7 +20,8 @@ func validateEnvironmentVariables() {
 	}
 	for _, k := range envProps {
 		if os.Getenv(k) == "" {
-			logger.Fatal(fmt.Sprintf("Variável de ambiente %s não definida. Encerrando aplicação...", k))
+			logger.Fatal(
+				fmt.Sprintf("Environment variable %s not defined. Terminating application...", k))
 		}
 	}
 }

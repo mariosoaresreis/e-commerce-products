@@ -1,12 +1,7 @@
 package config
 
 import (
-	"os"
 	"time"
-
-	"bitbucket.org/optiisolutions/go-common-v2/config"
-	"github.com/joho/godotenv"
-	"github.com/sirupsen/logrus"
 )
 
 const (
@@ -22,6 +17,7 @@ const (
 )
 
 type (
+/*
 	Config struct {
 		config.ServiceParams
 		config.TlsValidatorParams
@@ -33,6 +29,7 @@ type (
 
 		ZipkinURL string `json:"zipkin__endpoint"`
 	}
+
 	DbParams struct {
 		DbMigrationPath  string `json:"db_migration_path"`
 		Host             string `json:"db_host"`
@@ -47,6 +44,7 @@ type (
 		SqlTLSClientCert string `json:"postgres_tls_client_cert"`
 		SqlTLSClientKey  string `json:"postgres_tls_client_key"`
 	}
+
 	ServicesURLs struct {
 		AdhocJobMgrURL   string `json:"adhoc_job_mgr_url"`
 		DepartmentMgrURL string `json:"department_mgr_url"`
@@ -54,12 +52,14 @@ type (
 		LocationsMgrURL  string `json:"locations_mgr_url"`
 		PropertyMgrURL   string `json:"property_mgr_url"`
 	}
+*/
 )
 
-var cfg Config
+//var cfg Config
 
-const defaultDatabaseName = "timeline-svc"
+const defaultDatabaseName = "products"
 
+/*
 func InitConfig(commit, builtAt string) *Config {
 	//  load space .env variables first if available
 	filename := "./files/.env"
@@ -86,7 +86,7 @@ func InitConfig(commit, builtAt string) *Config {
 
 	err := cfg.LoadEnvVariables(cfg, commit, builtAt)
 	if err != nil {
-		logrus.Fatalf("cannot load config: %s", err.Error())
+		logger.Fatal("cannot load config: %s", err.Error())
 	}
 
 	err = cfg.ConfigureLogger()
@@ -104,4 +104,4 @@ func GetCurrentCfg() Config {
 
 func SetCurrentCfg(c Config) {
 	cfg = c
-}
+}*/
